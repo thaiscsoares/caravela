@@ -1,6 +1,6 @@
 #inicio{
 	height: 85vh;
-	background-image: url("imagens/mapa-das-grandes-navegacoes.png");
+	background-image: url("..imagens/mapa-das-grandes-navegacoes.png");
 	background-position: center;
 	display: flex;
 	align-items: center;
@@ -70,7 +70,7 @@ nav a{
 
 #simule{
 	height: 85vh;
-	background-image: url("imagens/mapa_linhas.jpg");
+	background-image: url("..imagens/mapa_linhas.jpg");
 	background-position: center;
 	display: flex;
 	align-items: center;
@@ -103,7 +103,7 @@ nav a{
 
 #dados{
 	height: 100vh;
-	background-image: url("imagens/mapa_azulejo.jpg");
+	background-image: url("..imagens/mapa_azulejo.jpg");
 	background-position: center;
 	display: flex;
 	align-items: center;
@@ -126,7 +126,7 @@ nav a{
 
 #contato{
 	height: 100vh;
-	background-image: url("imagens/padrao_descobrimentos.jpg");
+	background-image: url("..imagens/padrao_descobrimentos.jpg");
 	background-position: center;
 	display: flex;
 	align-items: center;

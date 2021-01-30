@@ -30,7 +30,7 @@ nav a{
 
 #introducao{
 	height: 100vh;
-	background-image: url("imagens/mapa_linhas.jpg");
+	background-image: url("..imagens/mapa_linhas.jpg");
 	background-position: center;
 	display: flex;
 	align-items: center;
@@ -118,15 +118,15 @@ nav a{
 }
 
 #o_imperio{
-	background-image: url("imagens/desembarque.jpg");
+	background-image: url("..imagens/desembarque.jpg");
 }
 
 #curiosidades{
-	background-image: url("imagens/namban.jpg");
+	background-image: url("..imagens/namban.jpg");
 }
 
 #desenvolvimento{
-	background-image: url("imagens/code.jpg");
+	background-image: url("..imagens/code.jpg");
 }
 
 #como_usar{
