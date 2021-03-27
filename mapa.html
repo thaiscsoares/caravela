@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Teste - Mapa Interativo</title>
+        <link rel="stylesheet" href="style\reset.css">
+        <link rel="stylesheet" href="style\style_mapa.css">
+        <link rel="stylesheet" href="style\style.css">
+        <script src="https://d3js.org/d3.v6.js"></script>
+    </head>
+    <body id="all">
+        <div id="barra">
+            <img id="minerva" src="imagens\minerva.png">
+
+            <nav>
+                <a href="index.html">home</a>
+                <a href="sobre.html">sobre</a>
+                <a href="mapa.html">caravela</a>
+                <a href="index.html#contato">contato</a>
+            </nav>
+        </div>
+
+        <div id="tela_interacao">
+            <div id="menu">
+                <h1>Construa sua rota</h1>
+                <div class="origin-city">
+                    <p>Cidade de origem: </p>
+                    <div><select id="origincity"></select></div>
+                </div>
+                <div class="destiny-city">
+                    <p>Cidade de destino: </p>
+                    <div><select id="destinycity"></select></div>
+                </div>
+
+                <button>Calcular rota</button>
+
+                <div id="distancia" class="resultados">
+                    <h1>Distância calculada</h1>
+                </div>
+
+                <div id="tempo" class="resultados">
+                    <h1>Tempo estimado</h1>
+                </div>
+            </div>
+            
+            <div id="container" class="svg-container"></div>
+        </div>
+        
+        <script type="text/javascript" src="script\mapa.js"></script>
+    </body>
+</html>

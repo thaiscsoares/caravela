@@ -1,0 +1,200 @@
+#inicio{
+	height: 85vh;
+	background-image: url("../imagens/mapa-das-grandes-navegacoes.png");
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-size: cover;
+}
+
+#titulo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#caravela{
+	color: #582308;
+	font-style: bold;
+	font-size: 85px;
+	font-family: fantasy, sans-serif;
+	text-transform: uppercase;
+}
+
+#modelo{
+	color: #582308;
+	font-size: 30px;
+	font-family: Gill Sans Extrabold, sans-serif;
+}
+
+#imperio{
+	color: #FFFFFF;
+	font-family: fantasy, sans-serif;
+	background-color: #582308;
+	font-size: 33px;
+	font-style: bold;
+	text-transform: uppercase;
+	border-radius: 10px;
+	padding: 6px;
+}
+
+
+#minerva{
+	width: 8%
+}
+
+#barra{
+	height: 15vh;
+	background: #d9d3c1;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	overflow: hidden;
+	position: sticky;
+}
+
+nav{
+	width: 80vw;
+	align-items: center;
+	display: inline;
+	justify-content: space-between;
+}
+nav a{
+	text-transform: uppercase;
+	font-size: 25px;
+	color: #582308;
+	font-family: fantasy, sans-serif;
+	display: inline;
+	justify-content: space-between;
+	text-decoration: none;
+}
+
+#simule{
+	height: 100vh;
+	background-image: url("../imagens/mapa_linhas.jpg");
+	background-position: center;
+	display: flex;
+	align-items: center;
+	background-size: cover;
+}
+
+#viaje{
+	background-color: rgba(255,255,255,0.5);
+	padding: 5px 5px 5px 70px;
+}
+
+#viaje:hover{
+	cursor: pointer;
+}
+
+#simule h2{
+	font-size: 40px;
+	color: #582308;
+	font-family: fantasy;
+	margin-bottom: 20px
+}
+
+#simule a{
+	font-size: 30px;
+	color: #582308;
+	font-family: fantasy;
+	border: 8px solid #8abf9c;
+	padding: 0 5px;
+}
+
+#dados{
+	height: 100vh;
+	background-image: url("../imagens/mapa_azulejo.jpg");
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-size: cover;
+}
+
+#dados_informacoes{
+	width: 100vw;
+	padding: 130px 0;
+	background-color: rgba(255,255,255,0.55);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.dados_imagem_texto img{
+	max-width: 150px;
+}
+
+#contato{
+	height: 100vh;
+	background-image: url("../imagens/padrao_descobrimentos.jpg");
+	background-position: center;
+	display: flex;
+	align-items: center;
+	background-size: cover;
+}
+
+#contato_titulo h2{
+	margin-left: 5px;
+	font-family: fantasy;
+	font-size: 33px;
+	color: #582308;
+}
+
+#contato_titulo h3{
+	margin-left: 5px;
+	font-family: Gill Sans Extrabold, sans-serif;
+	font-size: 22px;
+	color: #582308;
+}
+
+#form{
+	background-color: rgba(255,255,255,0.45);
+	padding: 20px;
+	margin-left: 30px;
+	border-radius: 10px;
+}
+
+#input_dados_pessoais{
+	display: flex;
+	flex-direction: column;
+	margin:5px 5px 0 5px;
+}
+
+#input_menssagem{
+	margin-left:5px;
+}
+
+#input_dados_pessoais input{
+	margin:2px;
+	width: 300px;
+	height: 25px;
+	border: none;
+}
+
+#input_menssagem input{
+	margin:2px;
+	width: 300px;
+	height: 100px;
+	border: none;
+}
+
+#form button{
+	border-radius: 5px;
+	background-color: #8abf9c;
+	padding: 10px 134px;
+	margin-top: 5px;
+	margin-left: 5px;
+	border: none;
+}
+
+#form button:hover{
+	cursor: pointer;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
