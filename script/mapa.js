@@ -11,13 +11,26 @@ var path = d3.geoPath().projection(projection)
 
 // load data  
 var worldmap = d3.json("/data/world.geojson")
+var routes = d3.json("/data/routes_caravela.geojson")
 var cities = d3.csv("/data/possessoes_imperio.csv")
 
 const g = svg.append('g')
 
-Promise.all([worldmap, cities]).then(function (values) {
+var layer_1 = g.selectAll("path")
+var layer_2 = g.selectAll("path")
+
+Promise.all([worldmap, cities, routes]).then(function (values) {
+    
+    // draw routes
+    layer_2
+    .data(values[2].features)
+    .enter()
+    .append("path")
+        .attr("class","route")
+        .attr("d", path)
+    
     // draw map
-    g.selectAll("path")
+    layer_1
         .data(values[0].features)
         .enter()
         .append("path")
@@ -74,11 +87,8 @@ territories.then(function (d) {
         .text(function (d) { return d })
 })
 
-d3.select("#menu .origin-city select")
-    .on("change", highlight_city)
-
-d3.select("#menu .destiny-city select")
-    .on("change", highlight_city)
+d3.select("#menu button")
+    .on("click", highlight_city)
 
 function highlight_city() {
     var orig = document.getElementById("origincity")
@@ -94,4 +104,17 @@ function highlight_city() {
                 return "red"
             }
         })
+    d3.selectAll(".route")
+            .transition()
+            .duration(5000)
+            .style("stroke", function(d){
+                var idx = 7
+                var key = Object.keys(d.properties)[idx]
+                var value = d.properties[key]
+                if (value == route) {
+                    return "red"
+                } else {
+                    return "none"
+                }
+            })
 }
