@@ -1,0 +1,55 @@
+#all{
+    height: 100vh;
+}
+#menu {
+    top: 20px;
+    left: 10px;
+    background-color: #582308;
+    width: 20vw;
+}
+
+#tela_interacao {
+    display: flex;
+}
+
+.svg-container {
+    /* display: inline-block; */
+    /* position: relative; */
+    width: 80vw;
+    height: 100vh;
+    /*padding-bottom: 100%;*/
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    /* display: inline-block; */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+}
+
+.country {
+    fill: #f0e4dd;
+    stroke: #e0cabc;
+    stroke-width: 0.5;
+}
+
+.country:hover{
+    fill: coral;
+}
+
+.circles {
+    fill: #3c373d;
+}
+
+#origincity {
+    background-color: rgba(255,255,255,0.45);
+    border: none;
+    height: 30px;
+}
+
+#destinycity{
+    background-color: rgba(255,255,255,0.45);
+    border: none;
+    height: 30px;
+}
