@@ -1,12 +1,12 @@
-var w = 1400
-var h = 800
+var w = 1300
+var h = 700
 var svg = d3.select("#container").append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
     .style("background-color", "#0E90AD")
     .attr("viewBox", "0 0 " + w + " " + h)
     .classed("svg-content", true)
 
-var projection = d3.geoMercator().translate([w / 2, h / 3]).scale(300).center([0, 40])
+var projection = d3.geoMercator().translate([w / 2, h / 3]).scale(250).center([0, 40])
 var path = d3.geoPath().projection(projection)
 
 // load data  
@@ -48,7 +48,7 @@ Promise.all([worldmap, cities, routes]).then(function (values) {
         .attr("class", "circles")
         .attr("cx", function (d) { return projection([d.Longitude, d.Latitude])[0] })
         .attr("cy", function (d) { return projection([d.Longitude, d.Latitude])[1] })
-        .attr("r", "4px")
+        .attr("r", "3px")
         .append('title')
         .attr("class", "location_name")
         .text(d => d.Local)
