@@ -95,6 +95,7 @@ function highlight_city() {
     var origin_city = orig.options[orig.selectedIndex].value
     var dest = document.getElementById("destinycity")
     var destiny_city = dest.options[dest.selectedIndex].value
+    var route = origin_city.concat("-", destiny_city)
     d3.selectAll(".circles")
         .style("fill", function (d) {
             var text = d.Local
@@ -104,9 +105,8 @@ function highlight_city() {
                 return "red"
             }
         })
+    
     d3.selectAll(".route")
-            .transition()
-            .duration(5000)
             .style("stroke", function(d){
                 var idx = 7
                 var key = Object.keys(d.properties)[idx]
@@ -117,4 +117,17 @@ function highlight_city() {
                     return "none"
                 }
             })
+            .call(transition)
+}
+
+function transition(path) {
+    path.transition()
+        .duration(7500)
+        .attrTween("stroke-dasharray", tweenDash)
+}
+  
+function tweenDash() {
+var l = this.getTotalLength(),
+    i = d3.interpolateString("0," + l, l + "," + l)
+return function(t) { return i(t); }
 }
