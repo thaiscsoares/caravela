@@ -87,15 +87,21 @@ territories.then(function (d) {
         .text(function (d) { return d })
 })
 
+d3.select("#menu .origin-city select")
+    .on("change", highlight_city)
+
+d3.select("#menu .destiny-city select")
+    .on("change", highlight_city)
+
 d3.select("#menu button")
-    .on("click", highlight_city)
+    .on("click", draw_route)
 
 function highlight_city() {
     var orig = document.getElementById("origincity")
     var origin_city = orig.options[orig.selectedIndex].value
     var dest = document.getElementById("destinycity")
     var destiny_city = dest.options[dest.selectedIndex].value
-    var route = origin_city.concat("-", destiny_city)
+
     d3.selectAll(".circles")
         .style("fill", function (d) {
             var text = d.Local
@@ -105,7 +111,15 @@ function highlight_city() {
                 return "red"
             }
         })
-    
+}
+
+function draw_route() {
+    var orig = document.getElementById("origincity")
+    var origin_city = orig.options[orig.selectedIndex].value
+    var dest = document.getElementById("destinycity")
+    var destiny_city = dest.options[dest.selectedIndex].value
+    var route = origin_city.concat("-", destiny_city)
+
     d3.selectAll(".route")
             .style("stroke", function(d){
                 var idx = 7
