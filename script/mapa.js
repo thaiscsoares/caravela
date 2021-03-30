@@ -125,6 +125,8 @@ function draw_route() {
                 var idx = 7
                 var key = Object.keys(d.properties)[idx]
                 var value = d.properties[key]
+                console.log(value) //tirar depois
+                console.log(d.properties.dToKM) //tirar depois
                 if (value == route) {
                     return "red"
                 } else {
