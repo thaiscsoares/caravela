@@ -122,7 +122,7 @@ function draw_route() {
 
     d3.selectAll(".route")
             .style("stroke", function(d){
-                var idx = 7
+                var idx = 0
                 var key = Object.keys(d.properties)[idx]
                 var value = d.properties[key]
                 console.log(value) //tirar depois
@@ -130,6 +130,7 @@ function draw_route() {
                 if (value == route) {
                     return "red"
                 } else {
+                    // return "none"
                     return "none"
                 }
             })
