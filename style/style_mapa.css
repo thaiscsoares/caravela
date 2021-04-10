@@ -43,7 +43,7 @@
     
 }
 
-.route {
+.routes {
     fill: none;
     stroke: none;
     stroke-width: 0.5;
@@ -105,4 +105,8 @@ option{
     height: 70px;
     margin: 5px;
     border-radius: 5px;
+}
+
+#distancia p {
+    color: white;
 }

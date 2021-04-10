@@ -11,7 +11,7 @@ var path = d3.geoPath().projection(projection)
 
 // load data  
 var worldmap = d3.json("/data/world.geojson")
-var routes = d3.json("/data/routes_caravela.geojson")
+var routes_data = d3.json("/data/routes_caravela.geojson")
 var cities = d3.csv("/data/possessoes_imperio.csv")
 
 const g = svg.append('g')
@@ -19,14 +19,14 @@ const g = svg.append('g')
 var layer_1 = g.selectAll("path")
 var layer_2 = g.selectAll("path")
 
-Promise.all([worldmap, cities, routes]).then(function (values) {
+Promise.all([worldmap, cities, routes_data]).then(function (values) {
     
     // draw routes
     layer_2
     .data(values[2].features)
     .enter()
     .append("path")
-        .attr("class","route")
+        .attr("class","routes")
         .attr("d", path)
     
     // draw map
@@ -118,19 +118,19 @@ function draw_route() {
     var origin_city = orig.options[orig.selectedIndex].value
     var dest = document.getElementById("destinycity")
     var destiny_city = dest.options[dest.selectedIndex].value
-    var route = origin_city.concat("-", destiny_city)
+    var route_name = origin_city.concat("-", destiny_city)
 
-    d3.selectAll(".route")
+    d3.selectAll(".routes")
             .style("stroke", function(d){
                 var idx = 0
                 var key = Object.keys(d.properties)[idx]
                 var value = d.properties[key]
-                console.log(value) //tirar depois
-                console.log(d.properties.distKM) //tirar depois
-                if (value == route) {
+                var dist_rota = d.properties.distKM
+                if (value == route_name) {
+                    d3.select("#distancia p")
+                        .text(dist_rota)
                     return "red"
                 } else {
-                    // return "none"
                     return "none"
                 }
             })
@@ -148,3 +148,9 @@ var l = this.getTotalLength(),
     i = d3.interpolateString("0," + l, l + "," + l)
 return function(t) { return i(t); }
 }
+
+// routes_data.then( function(d){
+//     console.log(d.features[200].properties.distKM)
+//     console.log(d.features[0])
+//     console.log(d)
+// })
