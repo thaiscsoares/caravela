@@ -67,7 +67,7 @@ const territories = cities.then(function (d) {
     return Promise.all(d.map(function (results) {
         return [results.Local];
     }))
-})
+});
 
 territories.then(function (d) {
     d3.select("#menu .origin-city select")
@@ -105,7 +105,9 @@ function highlight_city() {
     d3.selectAll(".circles")
         .style("fill", function (d) {
             var text = d.Local
-            if (text == origin_city || (text == destiny_city)) {
+            if (text !== origin_city && (text !== destiny_city)) {
+                return "#3c373d"
+            } else {
                 return "red"
             }
         })
