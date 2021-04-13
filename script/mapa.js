@@ -152,8 +152,7 @@ function draw_route() {
                 d3.select("#tempo p")
                     .text(d[i][1])
                 console.log(d[i][1])
-            } else {
-                return "0"
+                console.log(i)
             }
         }
     })
