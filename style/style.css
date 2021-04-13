@@ -140,6 +140,13 @@ nav ul {
 
 .dados_imagem_texto img{
 	max-width: 150px;
+	margin-bottom: 15px;
+}
+
+.dados_imagem_texto{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #contato{
