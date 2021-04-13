@@ -67,7 +67,7 @@ const territories = cities.then(function (d) {
     return Promise.all(d.map(function (results) {
         return [results.Local];
     }))
-});
+})
 
 territories.then(function (d) {
     d3.select("#menu .origin-city select")
@@ -133,6 +133,28 @@ function draw_route() {
                 }
             })
             .call(transition)
+
+    var routetime = d3.csv("/data/routeswithtime.csv")
+
+    const times = routetime.then(function (d) {
+        return Promise.all(d.map(function (results) {
+            return [results.routename, results.time];
+        }))
+    })
+
+    times.then(function (d) {
+        var array_size = d.length
+        for (var i = 0; i < array_size; i++) {
+            var rname = d[i][0]
+            if (rname == route_name) {
+                d3.select("#tempo p")
+                    .text(d[i][1])
+                console.log(d[i][1])
+            } else {
+                return "0"
+            }
+        }
+    })
 }
 
 function transition(path) {
@@ -146,9 +168,3 @@ var l = this.getTotalLength(),
     i = d3.interpolateString("0," + l, l + "," + l)
 return function(t) { return i(t); }
 }
-
-// routes_data.then( function(d){
-//     console.log(d.features[200].properties.distKM)
-//     console.log(d.features[0])
-//     console.log(d)
-// })

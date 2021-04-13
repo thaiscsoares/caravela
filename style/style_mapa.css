@@ -163,6 +163,13 @@ option{
     margin-top: 10px;
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
+    font-family: Gill Sans Extrabold, sans-serif;
+}
+
+#tempo p {
+    color: white;
+    text-transform: uppercase;
     font-family: Gill Sans Extrabold, sans-serif;
     font-size: 50px;
 }
