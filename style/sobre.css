@@ -1,6 +1,7 @@
 #barra{
 	position: fixed;
 	height: 15vh;
+	width: 100%;
 	background: #d9d3c1;
 	display: flex;
 	justify-content: space-around;
