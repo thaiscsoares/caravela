@@ -105,9 +105,7 @@ function highlight_city() {
     d3.selectAll(".circles")
         .style("fill", function (d) {
             var text = d.Local
-            if (text !== origin_city && (text !== destiny_city)) {
-                return "#3c373d"
-            } else {
+            if (text == origin_city || (text == destiny_city)) {
                 return "red"
             }
         })
