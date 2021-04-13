@@ -137,7 +137,7 @@ option{
     background-color: rgba(255,255,255,0.2);
     width: 16vw;
     height: 100px;
-    margin: 5px;
+    margin: 7px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -163,11 +163,12 @@ option{
     margin-top: 10px;
     color: white;
     text-transform: uppercase;
-    font-weight: bold;
     font-family: Gill Sans Extrabold, sans-serif;
+    font-size: 50px;
 }
 
 #tempo p {
+    margin-top: 10px;
     color: white;
     text-transform: uppercase;
     font-family: Gill Sans Extrabold, sans-serif;
