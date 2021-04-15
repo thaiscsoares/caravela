@@ -64,14 +64,14 @@ nav ul {
 	display: flex;
 	flex-direction: row-reverse;
 	text-transform: uppercase;
-	font-size: 40px;
+	font-size: 60px;
 	color: #582308;
 	font-family: fantasy, sans-serif;
 	padding-bottom: 25px;
 }
 
 #texto_introducao p{
-	font-size: 25px;
+	font-size: 30px;
 	font-family: Gill Sans Extrabold, sans-serif;
 	text-align: right;
 }
@@ -91,6 +91,10 @@ nav ul {
 #mapa_europa{
 	width: 30vw;
 	padding-right: 30px;
+}
+
+.texto_branco{
+	width: 40vw;
 }
 
 .texto_branco h1{
@@ -119,6 +123,7 @@ nav ul {
 .fundo_branco{
 	background-color: rgba(255,255,255,0.5);
 	padding: 20px 40px 20px 70px;
+	width: 40vw;
 }
 
 .fundo_branco h1{
@@ -127,11 +132,13 @@ nav ul {
 	color: #582308;
 	font-family: fantasy, sans-serif;
 	padding-bottom: 25px;
+	width: 50vw;
 }
 
 .fundo_branco p{
 	font-size: 25px;
 	font-family: Gill Sans Extrabold, sans-serif;
+	text-align: justify;
 }
 
 #o_imperio{
@@ -152,4 +159,13 @@ nav ul {
 
 #referencias{
 	background-color: #582308;
+}
+
+#link_github{
+	text-decoration: none;
+	color: black;
+}
+
+#link_github :hover{
+	cursor: pointer;
 }
