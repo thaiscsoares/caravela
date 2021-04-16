@@ -97,7 +97,7 @@ nav ul {
 
 #viaje{
 	background-color: rgba(255,255,255,0.5);
-	padding: 15px 15px 25px 70px;
+	padding: 35px 30px 45px 70px;
 }
 
 #viaje:hover{
@@ -116,7 +116,8 @@ nav ul {
 	color: #582308;
 	font-family: fantasy;
 	border: 8px solid #8abf9c;
-	padding: 0 5px;
+	padding: 3px 3px;
+	text-transform: uppercase;
 }
 
 #dados{
@@ -136,6 +137,12 @@ nav ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+}
+
+.dados_imagem_texto p{
+	color: #582308;
+	font-family: fantasy;
+	text-transform: uppercase;
 }
 
 .dados_imagem_texto img{
